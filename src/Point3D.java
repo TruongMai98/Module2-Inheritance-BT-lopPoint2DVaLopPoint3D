@@ -1,5 +1,6 @@
 public class Point3D extends Point2D{
     private float z;
+    private float[] array1;
 
     public Point3D() {
     }
@@ -17,13 +18,20 @@ public class Point3D extends Point2D{
         this.z = z;
     }
 
-    public void setXYZ(float x, float y, float z) {
-        super.setXY(x, y);
+    public void setXYZ(float z) {
+        super.getX();
+        super.getY();
         this.z = z;
     }
 
-    public float[] getXYZ() {
-        return new float[]{getX(), getY(), z};
+//    public float[] getXYZ() {
+//        return new float[]{getX(), getY(), z};
+//    }
+    public void getXYZ() {
+        float[] array1 = {getX(), getY(),z};
+        for (float a: array1) {
+            System.out.print(a + "\t");
+        }
     }
 
     @Override
